@@ -1,0 +1,61 @@
+﻿@model IEnumerable<thema12.Models.Task>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Tasks</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Task_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocker_Task)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Task_Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Task_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account.E_mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Blocker_Task.Task_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskStatus.TaskStatusName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Task_Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Task_ID">Edit</a> |
+                <a href="/Deadlines/Task/@item.Task_ID">Deadline</a> |
+                <a asp-action="Details" asp-route-id="@item.Task_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Task_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

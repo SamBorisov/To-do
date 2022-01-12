@@ -1,0 +1,54 @@
+﻿@model IEnumerable<thema12.Models.Deadline>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Deadlines</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Deadline1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeadlineStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Task)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reminders)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deadline1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeadlineStatus.DeadlineStatusName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Task.Task_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reminders)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Deadline_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Deadline_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Deadline_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

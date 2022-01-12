@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thema12", "12тема\thema12.csproj", "{58102358-AA45-4574-A1E6-9DA7980205EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58102358-AA45-4574-A1E6-9DA7980205EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58102358-AA45-4574-A1E6-9DA7980205EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58102358-AA45-4574-A1E6-9DA7980205EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58102358-AA45-4574-A1E6-9DA7980205EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBC617EC-38D9-460D-BD41-63CE64F93726}
+	EndGlobalSection
+EndGlobal
